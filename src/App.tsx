@@ -9,7 +9,6 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [requestLink, setRequestlink] = useState("");
   const [finalImage, setFinalImage] = useState<string>();
-  console.log(finalImage);
 
   const formData = new FormData();
   formData.append("size", "auto");
