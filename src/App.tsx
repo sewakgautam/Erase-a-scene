@@ -17,7 +17,7 @@ function App() {
   function bgremove() {
     setRequestlink(imagelink);
     formData.append("image_url", imagelink);
-    const data = axios({
+    axios({
       method: "post",
       url: "https://api.remove.bg/v1.0/removebg",
       data: formData,
@@ -38,7 +38,7 @@ function App() {
           setFinalImage(imageUrl);
         }
       })
-      .catch((error) => {
+      .catch((error: any) => {
         setLoading(false);
         alert("Error: " + "Unknown File Type, Please Try another Image link");
         return true;
