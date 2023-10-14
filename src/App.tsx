@@ -68,7 +68,6 @@ function App() {
             type="url"
             onKeyDown={(t) => {
               if (t.key == "Enter") {
-                setLoading(true);
                 bgremove();
               }
             }}
@@ -78,7 +77,6 @@ function App() {
             type="submit"
             onClick={() => {
               bgremove();
-              setLoading(true);
             }}
           >
             Remove
