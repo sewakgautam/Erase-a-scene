@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Foldit:wght@500&family=Pixelify+Sans:wght@600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,900;1,700&display=swap');
+
+.container {
+  position: relative;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+/* Logo styles */
+.logo {
+  font-family: 'Foldit';
+  font-size: 90px;
+  margin-bottom: 20px;
+}
+
+/* Input and Button styles */
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
+.img-card {
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-card a {
+  transition: all 0.3s ease-in-out;
+}
+
+.img-card img {
+  transform-origin: center center;
+  /* add this line */
+  scale: 1.2;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-card:hover img {
+  scale: 1;
+}
+
+input[type="url"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+  width: 450px;
+  height: 26px;
+}
+
+input[type="url"]:focus,
+input[type="url"]:active {
+  outline: none;
+  border-color: #fff;
+}
+
+input[type="url"]::placeholder {
+  color: #aaa;
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 150px;
+  height: 48px;
+  font-size: 22px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+button[type="submit"]:hover {
+  border: 1px solid white;
+  background-color: transparent;
+  /* Set background color to transparent on hover */
+}
+
+button[type="submit"] span {
+  height: 20px;
+  width: 20px;
+  margin-top: 2px;
+}
+
+.baseimage {
+  width: 400px;
+}
+
+.preview-container {
+  margin: 50px;
+  background-color: rgb(45, 45, 45);
+  padding: 30px;
+  border-radius: 20px;
+  width: auto;
+  gap: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.orginalImage,
+.bgRemovedImage {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bgRemovedImage img {
+
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA3LjkzNyA3LjkzOCcgaGVpZ2h0PSczMCcgd2lkdGg9JzMwJz48ZyBmaWxsPScjZWVlZmYwJz48cGF0aCBwYWludC1vcmRlcj0nc3Ryb2tlIGZpbGwgbWFya2VycycgZD0nTS4wMTQuMDE0SDMuOTdWMy45N0guMDE0ek0zLjk3IDMuOTY4aDMuOTU0djMuOTU1SDMuOTd6Jy8+PC9nPjwvc3ZnPgo=");
+}
+
+/* Media query for small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 50px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  .baseimage {
+    width: 300px;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: 100px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
