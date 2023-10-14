@@ -14,35 +14,44 @@ function App() {
   formData.append("size", "auto");
 
   function bgremove() {
-    setRequestlink(imagelink);
-    formData.append("image_url", imagelink);
-    axios({
-      method: "post",
-      url: "https://api.remove.bg/v1.0/removebg",
-      data: formData,
-      responseType: "arraybuffer",
-      headers: {
-        "X-Api-Key": ACCESSKEY,
-      },
-    })
-      .then((response: any) => {
-        if (response.status != 200) {
-          setLoading(false);
-          alert("ERROR");
-          return console.error("Error:", response.status, response.statusText);
-        } else {
-          setLoading(false);
-          const blob = new Blob([response.data], { type: "image/jpeg" });
-          const imageUrl = URL.createObjectURL(blob);
-          setImage("");
-          setFinalImage(imageUrl);
-        }
+    if (imagelink == "") {
+      alert("Input Field Empty");
+    } else {
+      setLoading(true);
+      setRequestlink(imagelink);
+      formData.append("image_url", imagelink);
+      axios({
+        method: "post",
+        url: "https://api.remove.bg/v1.0/removebg",
+        data: formData,
+        responseType: "arraybuffer",
+        headers: {
+          "X-Api-Key": ACCESSKEY,
+        },
       })
-      .catch(() => {
-        setLoading(false);
-        alert("Error: " + "Unknown File Type, Please Try another Image link");
-        return true;
-      });
+        .then((response: any) => {
+          if (response.status != 200) {
+            setLoading(false);
+            alert("ERROR");
+            return console.error(
+              "Error:",
+              response.status,
+              response.statusText
+            );
+          } else {
+            setLoading(false);
+            const blob = new Blob([response.data], { type: "image/jpeg" });
+            const imageUrl = URL.createObjectURL(blob);
+            setImage("");
+            setFinalImage(imageUrl);
+          }
+        })
+        .catch(() => {
+          setLoading(false);
+          alert("Error: " + "Unknown File Type, Please Try another Image link");
+          return true;
+        });
+    }
   }
 
   return (
