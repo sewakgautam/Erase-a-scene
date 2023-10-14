@@ -38,7 +38,7 @@ function App() {
           setFinalImage(imageUrl);
         }
       })
-      .catch((error: any) => {
+      .catch(() => {
         setLoading(false);
         alert("Error: " + "Unknown File Type, Please Try another Image link");
         return true;
