@@ -120,7 +120,7 @@ function App() {
           <a href="https://remove.bg" target="_blank">
             Remove.bg
           </a>{" "}
-          & For OpenSource <a href="#">Contribute Here</a>
+          & For OpenSource <a href="https://github.com/sewakgautam/Erase-a-scene">Contribute Here</a>
         </p>
       </footer>
     </>
