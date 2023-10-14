@@ -35,6 +35,7 @@ function App() {
           setLoading(false);
           const blob = new Blob([response.data], { type: "image/jpeg" });
           const imageUrl = URL.createObjectURL(blob);
+          setImage("");
           setFinalImage(imageUrl);
         }
       })
@@ -93,15 +94,17 @@ function App() {
             )}
           </div>
         ) : (
-          <Vortex
-            visible={loading}
-            height="80"
-            width="80"
-            ariaLabel="vortex-loading"
-            wrapperStyle={{}}
-            wrapperClass="vortex-wrapper"
-            colors={["red", "green", "blue", "yellow", "orange", "purple"]}
-          />
+          <div>
+            <Vortex
+              visible={loading}
+              height="80"
+              width="80"
+              ariaLabel="vortex-loading"
+              wrapperStyle={{}}
+              wrapperClass="vortex-wrapper"
+              colors={["red", "green", "blue", "yellow", "orange", "purple"]}
+            />
+          </div>
         )}
       </div>
 
