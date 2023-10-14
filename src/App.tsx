@@ -51,6 +51,7 @@ function App() {
         <div className="logo">Erase-a-Scene</div>
         <div className="input-container">
           <input
+            value={imagelink}
             placeholder="https://facebook.com/sewakgtm/profilepic.png"
             onChange={(t) => {
               setImage(t.target.value);
