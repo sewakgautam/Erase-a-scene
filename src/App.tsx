@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Upload, Download, Zap, Sparkles, Link, X } from "lucide-react";
-
+import { ACCESSKEY } from "./config.ts";
 interface ApiError extends Error {
   status?: number;
 }
@@ -17,7 +17,6 @@ function App(): JSX.Element {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Your API key - replace with your actual key or import from config
-  const ACCESSKEY = "YOUR_API_KEY_HERE"; // Replace with your actual API key
 
   function bgremove(): void {
     if (inputMethod === "url" && imagelink === "") {
