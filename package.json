@@ -11,13 +11,9 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
-    "axios": "^1.5.1",
-    "form-data": "^4.0.0",
-    "fs": "^0.0.1-security",
     "lucide-react": "^0.544.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-loader-spinner": "^5.4.5"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
